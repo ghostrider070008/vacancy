@@ -10,9 +10,11 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	jade = require('gulp-jade');
+
 
 gulp.task('sass', function() { // Создаем таск Sass
-	return gulp.src('app/sass/**/*.sass') // Берем источник
+	return gulp.src('app/sass/**/*.+(scss|sass)') // Берем источник
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
@@ -90,10 +92,26 @@ gulp.task('clear', function (callback) {
 	return cache.clearAll();
 })
 
+// чтобы запустить эту задачу, наберите в командной строке gulp jade
+gulp.task('jade', function() {
+	return gulp.src('app/*.jade')
+		.pipe(jade())
+		.pipe(gulp.dest('app')); // указываем gulp куда положить скомпилированные HTML файлы
+});
+
+gulp.task('jade-build', function() {
+	return gulp.src('app/*.jade')
+		.pipe(jade())
+		.pipe(gulp.dest('dist')); // указываем gulp куда положить скомпилированные HTML файлы
+});
+
 gulp.task('watch', function() {
-	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass')); // Наблюдение за sass файлами
-	gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
+	gulp.watch('app/sass/**/*.+(scss|sass)', gulp.parallel('sass')); // Наблюдение за sass файлами
 	gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
+gulp.task('watch-jade', function() {
+	gulp.watch('app/*.jade', gulp.parallel('jade')); // Наблюдение за jade файлами
+})
+gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'jade','browser-sync', 'watch', 'watch-jade'));
+gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts', 'jade-build'));
+gulp.task('start', gulp.parallel('jade'));

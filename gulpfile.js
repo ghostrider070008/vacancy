@@ -9,7 +9,8 @@ var gulp       = require('gulp'), // Подключаем Gulp
     imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
     pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
-    autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+    autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
+    jade = require('gulp-jade');
 
 gulp.task('sass', function() { // Создаем таск Sass
     return gulp.src('app/sass/**/*.+(scss|sass)') // Берем источник
@@ -90,10 +91,28 @@ gulp.task('clear', function (callback) {
     return cache.clearAll();
 })
 
+// чтобы запустить эту задачу, наберите в командной строке gulp jade
+gulp.task('jade', function() {
+    return gulp.src('app/**/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest('dist')); // указываем gulp куда положить скомпилированные HTML файлы
+});
+
 gulp.task('watch', function() {
     gulp.watch('app/sass/**/*.+(scss|sass)', gulp.parallel('sass')); // Наблюдение за sass файлами
     gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
     gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+});
+// чт// чтобы запустить эту задачу, наберите в командной строке gulp jade
+// gulp.task('jade', function() {
+//     return gulp.src('src/templates/**/*.jade')
+//         .pipe(jade())
+//         .pipe(gulp.dest('builds/development')); // указываем gulp куда положить скомпилированные HTML файлы
+// });обы запустить эту задачу, наберите в командной строке gulp jade
+gulp.task('jade', function() {
+    return gulp.src('src/templates/**/*.jade')
+        .pipe(jade())
+        .pipe(gulp.dest('builds/development')); // указываем gulp куда положить скомпилированные HTML файлы
 });
 gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
