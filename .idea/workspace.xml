@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b83c2e5a-f734-4eda-b96c-160489cc90df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/123/app/index.jade" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jade_gulp/app/index.jade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/123/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/123/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/123/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/123/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/123/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +70,8 @@
       <updated>1572937341470</updated>
       <workItem from="1572937345183" duration="6194000" />
       <workItem from="1572948989133" duration="287000" />
-      <workItem from="1572949376135" duration="8110000" />
+      <workItem from="1572949376135" duration="8729000" />
+      <workItem from="1572962106024" duration="262000" />
     </task>
     <servers />
   </component>

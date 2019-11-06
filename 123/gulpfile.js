@@ -107,9 +107,10 @@ gulp.task('jade-build', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.+(scss|sass)', gulp.parallel('sass')); // Наблюдение за sass файлами
+	gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('watch-jade', function() {
+	gulp.task('watch-jade', function() {
 	gulp.watch('app/*.jade', gulp.parallel('jade')); // Наблюдение за jade файлами
 })
 gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'jade','browser-sync', 'watch', 'watch-jade'));
