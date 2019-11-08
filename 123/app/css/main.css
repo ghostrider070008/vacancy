@@ -1,1 +1,33 @@
 @import url(../libs/magnific-popup/dist/magnific-popup.css);
+@media (min-width: 1280px) {
+  header {
+    height: 960px; } }
+
+@media (max-width: 1279px) and (min-width: 320px) {
+  header {
+    height: 300px; } }
+
+header {
+  background-image: url("../img/header/00.jpg");
+  width: auto;
+  background-size: cover; }
+
+h1 {
+  position: absolute;
+  left: 95px;
+  top: 25px;
+  color: white;
+  text-transform: uppercase; }
+
+.fa-phone-volume {
+  position: absolute;
+  width: 21.7px;
+  height: 21.7px;
+  left: 1364px;
+  top: 45.3px;
+  /* red */
+  color: #FF3754;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  font-size: 24px; }
