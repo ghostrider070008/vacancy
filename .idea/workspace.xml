@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b83c2e5a-f734-4eda-b96c-160489cc90df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/123/app/sass/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/css/libs.css" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/css/libs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/css/libs.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/css/libs.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/index.jade" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/index.jade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/sass/libs.sass" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/sass/libs.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/123/app/sass/main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/css/libs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/img/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/img/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/dist/js/libs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/123/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/123/gulpfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +88,8 @@
       <workItem from="1572948989133" duration="287000" />
       <workItem from="1572949376135" duration="8729000" />
       <workItem from="1572962106024" duration="262000" />
-      <workItem from="1573133395241" duration="783000" />
+      <workItem from="1573133395241" duration="1121000" />
+      <workItem from="1573207603551" duration="4547000" />
     </task>
     <servers />
   </component>
