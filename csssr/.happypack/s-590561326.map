@@ -1,0 +1,1 @@
+{"version":3,"sources":["app\\scripts\\app.js"],"names":[],"mappings":";;AAAA;;;;AACA;;;;;;AAEA,sBAAE,YAAM;AACP;AACA,CAFD","file":"app.js","sourceRoot":"C:/OSPanel/domains/vacancy/csssr","sourcesContent":["import svg4everybody from 'svg4everybody';\nimport $ from 'jquery';\n\n$(() => {\n\tsvg4everybody();\n});\n"]}
